@@ -1,0 +1,15 @@
+<h1> Hello Word !</h1>
+<p> This is my first webpage flask!!!</p>
+<p>Maa ngi toudou {{ first_name }}</p>
+
+<p>{{ stuff|safe }}</p>
+<h3>Favorite Pizza </h3>
+{% for topping in favorite_pizza %}
+{{ topping }} <br/>
+{% endfor %}
+<br/><br/>
+{% for topping in favorite_pizza %}
+{% if topping==limon %}
+{{ topping+ ndour }} <br/>
+{% endif %}
+{% endfor %}
