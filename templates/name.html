@@ -18,9 +18,21 @@
 
 {% if name %}
     <h1> Salut {{ name }} !!</h1>
+    <br/>
+        <img src="{{ url_for('static',filename=
+    'images/Internet-based-Smart-Poultry-Farm.jpg')}}"
+    width="1100">
+    <br/><br/>
+    <p id="demo"> This is stuff ...  </p>
+
+<script src="{{ url_for('static', filename='js/myfile.js')}}">
+
+</script>
+
 {% else %}
     <h1> Quel est votre nom ? </h1>
     <br/>
+
     <form method="POST">
         {{ form.hidden_tag() }}
         {{ form.name.label (class="form-label") }}
