@@ -8,8 +8,14 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "le mot de passe que personne ne doit savoir "
 # ajout d'un database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# ancien sqldatabase
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# nouveau sqldatabase
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://'root:password123@localhost/Users'
+#le nouveau que j'ai eu avec claud en installant pymysql
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/crs_flask_db'
 #Initialisation du database
+
 db = SQLAlchemy(app)
 
 #Creation de modele
